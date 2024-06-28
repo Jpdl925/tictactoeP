@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Julius
 
-Currently, two official plugins are available:
+Date Revised: 6/20/24
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Challenge 1 Tic Tac Toe Game in React Part 1
+Tic Tac Toe Game in React
 
-## Expanding the ESLint configuration
+In this assignment you will build a small tic-tac-toe game in React with Javascript. You have learned the techniques and fundamental to building any React app, Now it is time to put it into practice.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Must have a component folder ( square component and board component)
+Upload to github every day
+Must be able to talk through the code to show comprehension of React (useState, useEffect....)(will be part of your grade) 
 
-- Configure the top-level `parserOptions` property like this:
+https://react.dev/learn/tutorial-tic-tac-toe
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
