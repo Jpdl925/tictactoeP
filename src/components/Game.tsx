@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Board from "./Board";
+import { Button, Center } from "@chakra-ui/react";
 
 const Game = () => {
   // USE STATES
@@ -33,6 +34,11 @@ const Game = () => {
     // Setting current move to move user has selected
     setCurrentMove(nextMove);
   };
+  // Reset button sets move to 0, and erases Array
+  const resetGame = () => {
+    setCurrentMove(0);
+    setHistory([Array(9).fill(null)])
+  }
   // Mapping out all the moves made (squares is reading the whole array, move is reading the number of arrays)
   const moves = history.map((squares, move) => {
     // Visual representation of squares and move
@@ -56,9 +62,9 @@ const Game = () => {
 
   return (
     <>
-      <div className="game">
+      <div  className="game">
         <div className="game-board">
-          <Board
+          <Board 
             xIsNext={xIsNext}
             squares={currentSquares}
             onPlay={handlePlay}
@@ -68,6 +74,7 @@ const Game = () => {
           <ol>{moves}</ol>
         </div>
       </div>
+      <Button onClick={resetGame} justifySelf={"center"} marginTop={20}>Reset Game</Button>
     </>
   );
 };
