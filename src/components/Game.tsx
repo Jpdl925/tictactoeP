@@ -15,7 +15,7 @@ const Game = () => {
   const currentSquares = history[currentMove];
 
   //   Function taking in current array state copy
-  const handlePlay = (nextSquares) => {
+  const handlePlay = (nextSquares:any) => {
     // Creating a new history array to old and current array / all current arrays
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     // Setting current history to current state of array
@@ -29,7 +29,7 @@ const Game = () => {
   };
 
   //   Function to jump to move that user has selected
-  const jumpTo = (nextMove) => {
+  const jumpTo = (nextMove:any) => {
     // Setting current move to move user has selected
     setCurrentMove(nextMove);
   };

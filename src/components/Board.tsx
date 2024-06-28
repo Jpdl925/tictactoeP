@@ -1,7 +1,13 @@
 import { useState } from "react"
 import Square from "./Square"
 
-const Board = ({ xIsNext, squares, onPlay }) => {
+interface Props {
+  xIsNext:boolean
+  squares:any
+  onPlay:any 
+}
+
+const Board = ({ xIsNext, squares, onPlay }:Props) => {
 
 
 // Function for calculating winner
