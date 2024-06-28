@@ -54,14 +54,18 @@ const Game = () => {
 
     // Creating an element for each move made
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li className="moveBtn" key={move}>
+        <button  onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
 
   return (
     <>
+    <h1 className="title" >TIC-TAC-TOE</h1>
+    <div className="gameSpace">
+      <div className="allComps">
+
       <div  className="game">
         <div className="game-board">
           <Board 
@@ -74,7 +78,12 @@ const Game = () => {
           <ol>{moves}</ol>
         </div>
       </div>
-      <Button onClick={resetGame} justifySelf={"center"} marginTop={20}>Reset Game</Button>
+      <div className="btnRow">
+      <button className="resetBtn" onClick={resetGame}>Reset Game</button>
+      </div>
+      </div>
+    </div>
+
     </>
   );
 };
